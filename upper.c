@@ -1,20 +1,20 @@
 //WAP to read first word of a sentence as a character array and if the first character isn't uppercase convert it to uppercase and print the word
 #include<stdio.h>
+#include<string.h>
 void main()
 {
 	printf("Enter a sentence : ");
 	int i,n;
 	char str[100],str1[100];
-	for(i=0;str[i]!='\0';i++);
-	{
-		scanf("%c",&str[i]);
-	}
-	for(i=0;str[i]!=' ';i++)//Storing the first word of the sentence in a new array
+	gets(str);
+	for(i=0;str[i]!=' ';i++)//Storing the first word of the sentence in a new character array
 	{
 		str1[i]=str[i];
 	}
-	if(str[0]>='a'&&str[0]<='z')
+	if(str1[0]>='a'&&str1[0]<='z')
 	{
-		str[0]=str[0]+('a'-'A');
+		str1[0]=str1[0]-('a'-'A');
 	}
+	printf("The required word is ");
+	puts(str1);
 }
